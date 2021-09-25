@@ -34,7 +34,7 @@ public class UserController {
     public String saveUser(User user, RedirectAttributes ra) {
 
         userService.saveUser(user);
-        //透過通道Message 回傳 The user has been saved successfully 給users中的[[${Message}]]
+
         ra.addFlashAttribute("Message", "The user has been saved successfully");
 
         return "redirect:/users";
